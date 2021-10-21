@@ -1,9 +1,6 @@
-
-Training files and ASE Calculator of the PhysNet potential model for formic acid dimer
-
 # PhysNet
 
-Tensorflow implementation of PhysNet (see https://arxiv.org/abs/1902.08408) for details
+Tensorflow implementation of PhysNet (see https://arxiv.org/abs/1902.08408 (OLD)) for details
 
 
 ## Requirements
@@ -67,4 +64,5 @@ If you find this software useful, please cite:
 ```
 Unke, O. T. and Meuwly, M. "PhysNet: A Neural Network for Predicting Energies, Forces, Dipole Moments and Partial Charges" arxiv:1902.08408 (2019).
 ```
+
 
