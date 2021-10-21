@@ -24,12 +24,9 @@ python3 train.py
 
 in a terminal to start training. 
 
-The included "config.txt" assumes that the dataset "sn2_reactions.npz" is present. It can be downloaded from: https://zenodo.org/record/2605341. In order to use a different dataset, it needs to be formatted in the same way as this example ("sn2_reactions.npz"). Please refer to the README file of the dataset (available from https://zenodo.org/record/2605341) for details.
-
-
 ## How to use - ASE Calculator
 
-Import the ASE calculator PhysNetCalculator from PhysNet.py and link the path to the checkpoint files for the neural network parameters and the config.txt file for the PhysNet architecture. 
+Import the ASE calculator PhysNet from physnet.py and link the path to the checkpoint files for the neural network parameters and the config.txt file for the PhysNet architecture. 
 
 ```
 from physnet import PhysNet
@@ -40,9 +37,9 @@ calc = PhysNet(
     config="./Final_Fit/config.txt")
 ```
 
-PhysNetCalculator contains a PointChargePotential class for QMMM calculation using the EIQMMM class of ASE. The electrostatic interactions are calculated as in the TIP3P model in ASE with the cutoff radii equivalent to the cutoff radii defined in PhysNet (default: width of 1.0 for the switch function to disable electrostatic interactions in the range 9.0 to 10.0)
+The PhysNet calculator contains a PointChargePotential class for QMMM calculation using the EIQMMM class of ASE. The electrostatic potential is calculated via shifted electrostatic Coulomb interactions.
 
-Example for QM system (PhysNet) in Water (TIP3P), see https://wiki.fysik.dtu.dk/ase/tutorials/qmmm/qmmm.html for detailed instructions:
+Example for QM system in Water, see https://wiki.fysik.dtu.dk/ase/tutorials/qmmm/qmmm.html for detailed instructions:
 
 ```
 qm_calc = PhysNet(...)            # QM calulcator as defined above
