@@ -7,7 +7,7 @@ Tensorflow implementation of PhysNet (see https://arxiv.org/abs/1902.08408) for 
 
 To run this software, you need:
 
-- python3 (tested with version 3.5.2 and higher)
+- python3 (tested with version 3.6 and higher)
 - TensorFlow2 (tested with version 2.2 and higher)
 
 
